@@ -1,0 +1,48 @@
+
+<div class='page-header'>
+  <h1> Reviews</h1>
+</div>
+
+<table class="table table-striped">
+            Product Reviews
+            <tr>
+              <th> Title</th>
+              <th>Description</th>
+              <th>Rating</th>
+              <th>User</th>
+           </tr>
+              <tbody>
+                <% @product_reviews.each do |product_review| %>
+                  <tr>
+                      <td><%= product_review.title %></td>
+                      <td><%= product_review.description %></td>
+                      <td><%= product_review.rating %></td>
+                      <td>Reviewer's name goes here</td>
+                 </tr>
+                    <% end %>
+              </tbody>
+      </table>
+<br>
+<br>
+<br>
+<br>
+
+<table class="table table-striped" >
+          Company Reviews
+                <tr>
+                    <th> Title</th>
+                    <th>Description</th>
+                    <th>Rating</th>
+                    <th>User</th>
+                </tr>
+                    <tbody>
+                      <% @company_reviews.each do |company_review| %>
+                          <tr>
+                            <td><%= company_review.title %></td>
+                            <td><%= company_review.description  %></td>
+                            <td><%= company_review.rating %></td>
+                            <td>Reviewer goes here.</td>
+                          </tr>
+                        <% end %>
+                    </tbody>
+</table>
